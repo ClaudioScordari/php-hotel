@@ -37,7 +37,6 @@ $hotels = [
         'distance_to_center' => 50
     ],
 ];
-
 ?>
 
 <!DOCTYPE html>
@@ -58,34 +57,34 @@ $hotels = [
         <h1>
             Hotel
         </h1>
-    
+
         <div>
             <ul>
                 <?php
-                    foreach ($hotels as $index => $oneHotel) {
+                foreach ($hotels as $index => $oneHotel) {
                 ?>
-    
+
                     <li class="mb-4">
                         <h2>
                             <?php
-                                echo $oneHotel['name'];
+                            echo $oneHotel['name'];
                             ?>
                         </h2>
-    
+
                         <!-- ----------------------------- -->
-    
+
                         <div>
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
                                         <?php
-                                            foreach($oneHotel as $index => $infoHotel){
-                                                echo 
-                                                    '<th scope="col">'
-                                                        . $index .
-                                                    '</th>';
-                                            }
+                                        foreach ($oneHotel as $index => $infoHotel) {
+                                            echo
+                                            '<th scope="col">'
+                                                . $index .
+                                                '</th>';
+                                        }
                                         ?>
                                     </tr>
                                 </thead>
@@ -94,27 +93,92 @@ $hotels = [
                                     <tr>
                                         <th scope="row">--></th>
                                         <?php
-                                            foreach($oneHotel as $index => $infoHotel){
-                                                echo 
-                                                    '<td>'
-                                                        . $infoHotel .
-                                                    '</td>';
-                                            }
+                                        foreach ($oneHotel as $index => $infoHotel) {
+                                            echo
+                                            '<td>'
+                                                . $infoHotel .
+                                                '</td>';
+                                        }
                                         ?>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </li>
-    
+
                     <hr>
-    
+
                 <?php
-                    }
+                }
                 ?>
             </ul>
         </div>
-        
+
+        <h1 class="my-5">ALTERNATIVA</h1>
+
+        <div>
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <?php
+                        foreach ($hotels[0] as $i => $keyArray) {
+                            echo '<th scope="col">' . $i . '</th>';
+                        }
+                        ?>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <?php
+                        foreach ($hotels[0] as $key => $info) {
+                            echo '<td>' . $info . '</td>';
+                        }
+                        ?>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">2</th>
+                        <?php
+                        foreach ($hotels[1] as $key => $info) {
+                            echo '<td>' . $info . '</td>';
+                        }
+                        ?>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">3</th>
+                        <?php
+                        foreach ($hotels[2] as $key => $info) {
+                            echo '<td>' . $info . '</td>';
+                        }
+                        ?>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">4</th>
+                        <?php
+                        foreach ($hotels[3] as $key => $info) {
+                            echo '<td>' . $info . '</td>';
+                        }
+                        ?>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">5</th>
+                        <?php
+                        foreach ($hotels[4] as $key => $info) {
+                            echo '<td>' . $info . '</td>';
+                        }
+                        ?>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </body>
 
